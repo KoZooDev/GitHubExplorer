@@ -17,13 +17,13 @@ interface FormProps {
 export const Form = styled.form<FormProps>`
     margin-top:40px;
     max-width: 960px;
-
+    flex: 1;
     display: flex;
 
     input {
         flex: 1;
         height: 70px;
-        padding: 0 24px;
+        padding: 0 10px;
         border: 0;
         border-radius: 5px 0 0 5px;
         color: #3A3A3A;
@@ -37,14 +37,14 @@ export const Form = styled.form<FormProps>`
     }
 
     button {
-        width: 210px;
+        width: 310px;
         height: 70px;
         background: #04D361;
         border-radius: 0 5px 5px 0;
         border: 0;
         color: #FFF;
         font-weight: bold;
-
+        padding: 0 5px;
         transition: background-color 0.2s;
 
         &:hover {
@@ -82,26 +82,50 @@ export const Repositorys = styled.div`
         height: 64px;
         border-radius: 50%;
     }
-    
-    div {   
-        margin: 0 16px;
-        flex: 1;
-        strong{
-            font-size: 20px;
-            color: #3D3D4D;
-        }
+    @media screen and (max-width: 959px) {
+        div {   
+            margin: 0 16px;
+            flex: 1;
+            strong{
+                font-size: 14px;
+                color: #3D3D4D;
+            }
 
-        p {
-            font-size: 18px;
-            color: #A8A8B3;
-            margin-top: 4px;
-        }
+            p {
+                font-size: 12px;
+                color: #A8A8B3;
+                margin-top: 4px;
+            }
 
-        svg {
-            margin-left: auto;
-            color: #CBCBD6;
+            svg {
+                margin-left: auto;
+                color: #CBCBD6;
+            }
         }
     }
+
+    @media screen and (min-width: 960px) {
+        div {   
+            margin: 0 16px;
+            flex: 1;
+            strong{
+                font-size: 20px;
+                color: #3D3D4D;
+            }
+
+            p {
+                font-size: 18px;
+                color: #A8A8B3;
+                margin-top: 4px;
+            }
+
+            svg {
+                margin-left: auto;
+                color: #CBCBD6;
+            }
+        }
+    }
+    
 `;
 
 export const Error = styled.span`

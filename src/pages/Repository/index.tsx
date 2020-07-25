@@ -33,7 +33,7 @@ interface Issue {
     }
 }
 const Repository: React.FC = () => {
-
+    
     const { params } = useRouteMatch<RepositoryParams>();
     const [repository, setRepository] = useState<Repository | null>(null);
     const [issues, setIssues] = useState<Issue[] | null>(null);
@@ -67,7 +67,8 @@ const Repository: React.FC = () => {
                 <RepositoryInfo>
                     <header>
                         
-                        <img src={repository.owner.avatar_url}/>/* eslint-disable-line */
+                        <img src={repository.owner.avatar_url}/>{// eslint-disable-line
+}
                         <div className="info-user">
                             <strong>{repository.full_name}</strong>
                             <p>{repository.description}</p>

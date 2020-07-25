@@ -24,30 +24,66 @@ export const Header = styled.header`
 
 export const RepositoryInfo = styled.section`
 margin-top: 80px;
-  header{
-      display: flex;
-      align-items: center
-  }
-  img{
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-  }
+    @media screen and (max-width: 360px) {
+        header {
+            max-width: 960px;
+            display: grid;
+        }
+        img{
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: auto;
+        }
 
-  .info-user {
-      margin-left: 36px;
+        .info-user {
+            margin-left: 16px;
+            max-width: 360px;
+      
+            strong {
+                font-size: 25px;
+                color: #3D3D4D;
+                padding: 5px 0;
+            }
 
-      strong {
-          font-size: 36px;
-          color: #3D3D4D;
-      }
+            p {
+                font-size: 18px;
+                color: #737380;
+                margin-top: 4px;
+            }
+        }
+    }
 
-      p {
-          font-size: 18px;
-          color: #737380;
-          margin-top: 4px;
-      }
-  }
+    @media screen and (min-width: 960px) {
+        header{
+            display: flex;
+            align-items: center;
+            max-width: 960px;
+        }
+
+        img{
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+        }
+
+        .info-user {
+            margin-left: 16px;
+            max-width: 960px;
+      
+            strong {
+                font-size: 30px;
+                color: #3D3D4D;
+                padding: 5px 0;
+            }
+
+            p {
+                font-size: 18px;
+                color: #737380;
+                margin-top: 4px;
+            }
+        }
+    } 
 
   ul {
       display: flex;
@@ -57,7 +93,7 @@ margin-top: 80px;
       li {
 
           & + li {
-            margin-left: 80px;
+            margin-left: 55px;
           }
 
           strong {
